@@ -1,8 +1,5 @@
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
-import { Link } from 'expo-router';
 import { Drawer } from 'expo-router/drawer';
-
-import { HeaderButton } from '../../components/HeaderButton';
 
 const DrawerLayout = () => (
   <Drawer>
@@ -15,18 +12,47 @@ const DrawerLayout = () => (
       }}
     />
     <Drawer.Screen
-      name="(tabs)"
+      name="bai-tap-1"
       options={{
-        headerTitle: 'Tabs',
-        drawerLabel: 'Tabs',
+        headerTitle: 'Social Media Feed',
+        drawerLabel: 'bai-tap-1',
         drawerIcon: ({ size, color }) => (
           <MaterialIcons name="border-bottom" size={size} color={color} />
         ),
-        headerRight: () => (
-          <Link href="/modal" asChild>
-            <HeaderButton />
-          </Link>
+      }}
+    />
+    <Drawer.Screen
+      name="bai-tap-2"
+      options={{
+        headerTitle: 'Settings and Feedback',
+        drawerLabel: 'bai-tap-2',
+        drawerIcon: ({ size, color }) => (
+          <MaterialIcons name="border-bottom" size={size} color={color} />
         ),
+        headerStyle: {
+          backgroundColor: '#ffffff',
+        },
+        headerTintColor: '#000000',
+        drawerLabelStyle: {
+          color: '#000000',
+        },
+      }}
+    />
+    <Drawer.Screen
+      name="bai-tap-3"
+      options={{
+        headerTitle: 'React Navigation',
+        drawerLabel: 'bai-tap-3',
+        drawerIcon: ({ size, color }) => (
+          <MaterialIcons name="border-bottom" size={size} color={color} />
+        ),
+        headerStyle: {
+          backgroundColor: '#ffffff',
+        },
+        headerTintColor: '#000000',
+        drawerLabelStyle: {
+          color: '#000000',
+        },
       }}
     />
   </Drawer>

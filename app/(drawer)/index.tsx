@@ -1,15 +1,14 @@
 import { Stack } from 'expo-router';
-
-import { Container } from '~/components/Container';
-import { ScreenContent } from '~/components/ScreenContent';
+import { Text } from '../../components/ui/text';
+import { View } from 'react-native';
 
 export default function Home() {
   return (
     <>
       <Stack.Screen options={{ title: 'Home' }} />
-      <Container>
-        <ScreenContent path="app/(drawer)/index.tsx" title="Home" />
-      </Container>
+      <View className='flex-1'>
+        <Text className='font-bold'>Home</Text>
+      </View>
     </>
   );
 }
